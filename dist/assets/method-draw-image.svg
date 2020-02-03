@@ -1,0 +1,31 @@
+<svg width="225" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+ <metadata>Created by potrace 1.15, written by Peter Selinger 2001-2017</metadata>
+
+ <style>
+  .orbit {
+    stroke-dasharray: 800;
+    <!-- stroke-dashoffset: 500; -->
+    animation: dash 5s linear infinite;
+  }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+ </style>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="89.557804" rx="89.557804" id="svg_13" cy="114.508024" cx="114.10642" stroke-width="15" stroke="#000000" fill="#ffffff"/>
+  <ellipse class="orbit" stroke="#000000" transform="rotate(-43.991554260253906 109.63691711425776,112.23755645751953) " ry="131.278325" rx="50.818556" id="svg_14" cy="112.237558" cx="109.636917" stroke-width="13" fill="none"/>
+  <path id="svg_15" d="m83.427,38.72253l4.85662,-2.17652c1.01031,-0.14799 18.19709,-3.78333 19.33922,-3.78333c23.69467,2.40963 87.25652,78.90715 87.40923,92.32898c1.4537,3.04395 -5.47449,22.1492 -5.72338,21.91648c0.2489,0.23272 -95.71535,-50.45456 -105.88169,-108.28561z" stroke-width="13" fill="#ffffff"/>
+ </g>
+</svg>
