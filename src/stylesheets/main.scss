@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+
+.img_container {
+  background-size: cover;
+  background-position: center;
+}
+
+.h_c {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.d_form_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.d_form {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+}
+
+.control {
+  width: 100px;
+}
+
+.button {
+  width: 100px;
+  margin-top: 10px;
+  background-color: rgba(214, 108, 255, 0.5);
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+div > .button {
+  background-color: rgba(133, 66, 160, 0.8);
+  color: white;
+  border: 1px solid rgba(88, 43, 105, 0.8);
+  transition: all 0.2s;
+}
+
+div > .button:hover {
+  background-color: rgba(88, 44, 105, 0.8);
+  color: white;
+  border: 1px solid rgba(88, 43, 105, 0.8);
+}
+
+div > .title, div > .subtitle {
+  color: white;
+}
+
+
+#root > main > section > div > div > h2 {
+  margin-top: 8px;
+}
+
+
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.innerCardContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 0.2s;
+}
+
+.innerCardContainer:hover {
+  transform: scale(1.1);
+}
+
+.errorContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: auto;
+  background-color: rgba(0,0,0,0.5);
+  
+}
+
+.big_boi {
+  width: 250px;
+  margin: auto;
+  transform: scale(1.5);
+}
+
+.biggy {
+  transform: scale(1.5);
+}
+
+.innerCardContainer > .rule {
+  height: 1px;
+  margin: auto;
+  background-color: white;
+  width: 90%;
+}
+
+.innerCardContainer > * {
+  margin: 10px 0;
+}
+
+.a_counter {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.b_button {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: 30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.2);
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.b_button:hover {
+  transform: scale(1.4);
+}
+
+.dist_head {
+  cursor: pointer;
+}
+
+.counter_inner {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+  position:absolute;
+  top:50vh;
+  left:50%;
+  transform:translateX(-50%);
+}
+.outer-circle {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding:2rem;
+  border:1px solid tomato;
+  border-radius:50%;
+  animation:rotate 2s linear infinite;
+}
+.outer-circle::before {
+  content:'';
+  height:.7rem;
+  width:.7rem;
+  background:green;
+  position:absolute;
+  top:.5rem;
+  left:0;
+  border-radius:50%;
+}
+.inner-circle {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding:1rem;
+  border:1px solid green;
+  border-radius:50%;
+  animation:rotate 1.5s linear infinite reverse;
+}
+.inner-circle::before {
+  content:'';
+  height:.7rem;
+  width:.7rem;
+  position:absolute;
+  top: -.39rem;
+  left:50%;
+  transform:translateX(-50%);
+  background:tomato;
+  border-radius:50%;
+}
+@keyframes rotate {
+  0%{
+    transform:translate(-50%, -50%) rotate(0);
+  }
+  100%{
+    transform:translate(-50%, -50%) rotate(360deg);
+  }
+}
