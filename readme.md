@@ -1,107 +1,74 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
 
-## Overview
 
-The second project is to **build a React application** that consumes a **public API**.
+This was the second project I built during the General Assembly Software Engineering Immersive Course (week 6). The project was built in collaboration with Jos Brogan https://github.com/JosBogan during a two day 'Reactathon' **public API**.
 
-### Technical Requirements
+### <h1>Asteroid-Catasteroid</h1>
 
-Your app must:
+Users input a date into the app, and it gives them information on the top five Asteroids closest to Earth on that date. The app uses NASA's NeoWs (Near Earth Object Web Service) RESTful API, and their APOD API (Astrony Picture of the Day), for the home page background image. A full list of NASA API's can be found here: https://api.nasa.gov/
 
-* **Consume a public API** – this could be anything but it must make sense for your project.
-* **Have several components** - At least one classical and one functional.
-* **The app should include a router** - with several "pages".
-* **Include wireframes** - that you designed before building the app.
-* Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
-* **Be deployed online** and accessible to the public.
+![home page](https://i.imgur.com/QVvvc4V.png)
 
----
-
-## Necessary Deliverables
-
-* A **working application**, hosted somewhere on the internet
-* A **link to your hosted working app** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
-
----
-
-## Suggested Ways to Get Started
-
-* **Don’t hesitate to write throwaway code** to solve short term problems.
-* **Read the docs for whatever technologies / frameworks / APIs you use**.
-* **Write DRY code**.
-* **Be consistent with your code style.**
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Keep user stories small and well-defined**, and remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-* **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-* **Make it all well-formatted.** Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc?
-* **Comment your code.** Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-* **Write pseudocode before you write actual code.** Thinking through the logic of something helps.
-
----
-
-## Useful Resources
-
-* [List of open APIs](https://any-api.com/)
-
-* [A collective list of free APIs for use in software and web development.](https://github.com/public-apis/public-apis)
-
-* [18 Fun APIs For Your Next Project - Victoria Bergquist - Medium](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
-
-* [Best Free APIs of 2019](https://rapidapi.com/collection/best-free-apis?utm_source=google&utm_medium=cpc&utm_campaign=1757574668_67679208454&utm_term=%2Bfree%20%2Bapis_b&utm_content=1t1&gclid=CjwKCAiAgqDxBRBTEiwA59eENwNUVqPD-v79Cgwl3EWtcRuMZlVGOCxAf5RcH74ZUM6cMKp6o5FZRxoCpVgQAvD_BwE)
+**<h1>Built With</h1>**
+* HTML5
+* CSS
+* Javascript
+    * ECMAScript6
+    * React.js
+    * axios
+* GitHub
 
 
-These are just a few examples of lists of free APIs you could use, there are hundreds out there!
+**<h1> Deployment </h1>**
+The asteroid app is deployed on Heroku and it can be found here: https://asteroid-catasteroid.herokuapp.com/
 
----
+**<h1>Getting Started</h1>**
+Use the clone button to download the app source code. In the terminal enter the following commands:
 
-## Project Feedback + Evaluation
+```
+<!-- To install all the packages listed in the package.json: -->
+$ npm i
+<!-- Run the app in your localhost: -->
+$ npm run serve
+<!-- Check the console for any issues and if there are check the package.json for any dependancies missing
+```  
 
-* __Project Workflow__: Did you complete the user stories, wireframes, task tracking as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
+**<h1>Website Architecture</h1>**
+<h2>The Nasa API</h2>
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+We had a limited time to build the app, so we wanted to utilise an API that would give us lots of interesting data on asteroids. This gave us more choice on what we wanted to display to the user. Rather than have a static background for the homepage we chose to use their APOD API, which offers up a new astronomy picture every day.
 
-* __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a login button and an index page)?
+<h2>Homepage</h2>
+Our homepage has the changing APOD API background, and allows the user to input a date using the date form. Once they have selected a date they press submit, and are taken to the next page. 
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors as we have in class?
+<h2>Asteroid Display Page</h3>
+Once you land on the asteroid display page, a function runs to get the data from the GitHub API and it populates six cards on the page with the asteroids that were closest to Earth on that day. The central card shows the closest asteroid.
 
-* __Problem Solving__: Are you able to defend why you implemented your solution in a certain way? Can you demonstrated that you thought through alternative implementations? _(Note that this part of your feedback evaluation will take place during your one-on-one code review with your instructors, after you've completed the project.)_
+The template of each card is stored in the AsteroidCard.js component and it uses the data passed down by the parent component.
 
-TODO 
+![asteroid cards](https://i.imgur.com/p8DFXd7.png)
 
-APIS -- NeoWs -- https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY
-        APOD -- https://api.nasa.gov/planetary/apod
-        MOAT -- http://mot-api.bluebulbprojects.com/v1/measures/?key=00000000-1111-2222-3333-444444444444
+We mapped through the API request to get the top six asteroids that were closest to Earth on the date the user chose.
 
-TWO PAGES
+![mapping through asteroid cards](https://i.imgur.com/zk4z58E.png)
+
+When the user clicks on any of the cards they are told how far away the asteroid was, but in comparison to a measurement they would understand. For example:
+
+![showing distance facts](https://i.imgur.com/vcVCpzB.png)
+
+We achieved this with a static component. It had a function that would generate random comparison's based on the distance of the asteroid, using a switch statement. 
+
+![static component](https://i.imgur.com/XEuYQOF.png)
+
+We imported it into our AsteroidCard.js, so that when the user clicked on the card the React notify plugin would show them a random form of measurement comparison.
+
+<h1>Challenges and future improvements</h1>
+
+Time constraints meant we were not able to achieve all the functionality we wanted. For example, using the data from the API to build a comparison generator for the size of the asteroid. We also realised that occasionally the APOD API would be a video, and therefore would not show up as a background image. 
+Our background image would be empty, and therefore we altered the code so that we had a placeholder image if the API returned a video.
+
+![image display](https://i.imgur.com/f1dtLmq.png)
+
+We also wanted to create our own loading icon, using a custom designed logo but we ran out of time and used a general one avaliable to us. 
 
 
-Npm I shiz 
-  AXIOS
-  ROUTER
-  BULMA
-
-ROUTES 
-
-FRONT PAGE -- Input with date form and APOD backgorund
-        Make GET Request with dates and send down props 
-        
-        ONLY ALLOW ONE DAY INPUT
-
-
-
-BACK PAGE -- Get image for the day TICK
-            Number of asteroids TICK
-            Display top astroid info. TICK
-            Display 5 after top astroid TICK
-              -- Nearmiss
-              -- Distance and translation in mesurable.
-              -- Speed 
-              -- Size
-              -- Extra detail
-
-(https://api.nasa.gov/assets/img/general/insight_photo.png)
-
-to do
-
-make box on front page

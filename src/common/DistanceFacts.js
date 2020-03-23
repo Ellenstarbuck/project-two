@@ -1,14 +1,17 @@
 class DistanceFacts {
 
-  static comparisonGenerator(d) {
+  //static component that generates random facts based on the distance of the asteroid
 
+  static comparisonGenerator(d) {
+    //measurements for the size of each average item in the switch statement (in meters)
     const measurements = [0.002, 1.47, 11, 8850, 21200000, 2, 150, 381, 0.1, 0.5, 0.3, 15000, 13, 1.8]
+    //sum to randomly choose one of the measurements
     const randomNumber = Math.floor(Math.random() * 14)
 
+    //turning the asteroid distance into a randomly selected measurement then fixing it to 2 decimal places.
     let m = ((d * 1000) / measurements[randomNumber]).toFixed(2)
     m = m.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     let answer
-
     switch (randomNumber) {
       case 0:
         answer = `This asteroid was ${m} grains of sand away`

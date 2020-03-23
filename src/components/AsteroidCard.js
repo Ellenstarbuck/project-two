@@ -5,14 +5,17 @@ import { notify } from 'react-notify-toast'
 
 class AsteroidCard extends React.Component {
 
+  //gettting the average size of the asteroid
   averageSize = () => {
     return ((parseInt(this.props.estimated_diameter.meters.estimated_diameter_min) + parseInt(this.props.estimated_diameter.meters.estimated_diameter_max)) / 2)
   }
 
+
+  //the notification box which shows the 'distance facts' for the user. Imported from our static component 'distance facts'
   calcDist = () => {
+    //deconstructing the color on the notification
     const myColor = { background: '#FFFFFF', text: '#000000' }
     notify.show(DistanceFacts.comparisonGenerator(this.props.close_approach_data[0].miss_distance.kilometers), 'custom', 4000, myColor)
-    // DistanceFacts.comparisonGenerator(this.props.close_approach_data[0].miss_distance.kilometers)
   }
 
   render() {
@@ -39,7 +42,7 @@ class AsteroidCard extends React.Component {
 
 }
 
-// CHANGE TO A FUNCTIONAL COMPONENT
+
 
 
 

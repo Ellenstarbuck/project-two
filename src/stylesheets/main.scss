@@ -96,12 +96,13 @@ div > .title, div > .subtitle {
   
 }
 
+//the main display card
 .big_boi {
   width: 250px;
   margin: auto;
   transform: scale(1.5);
 }
-
+//the main display card
 .biggy {
   transform: scale(1.5);
 }
@@ -164,6 +165,7 @@ i {
   background: rgba(0, 0, 0, 0.5);
 }
 
+//our loading image
 .spinner {
   position:absolute;
   top:50vh;
