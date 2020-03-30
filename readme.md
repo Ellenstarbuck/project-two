@@ -62,7 +62,10 @@ We achieved this with a static component. It had a function that would generate 
 
 We imported it into our AsteroidCard.js, so that when the user clicked on the card the React notify plugin would show them a random form of measurement comparison.
 
-<h1>Challenges and future improvements</h1>
+<h1>Wins and Key Learnings</h1>
+Pair coding successfully is a valuable win - we worked well together as a team, and were able to draw on our different strengths to make the project work. We also worked well as explaining our thought processes to each other, and I personally learnt a lot from the way Jos problem solves. I also gained confidence in my own abilities by coding in front of another person. My key learning was exploring how API's from external parties work, and how you can extract and discount data from them by using concise code, and logical problem solving. The NASA API had very specific information we wanted, and we learnt how to extract that information successfully. 
+
+<h1>Challenges and Future Improvements</h1>
 
 Time constraints meant we were not able to achieve all the functionality we wanted. For example, using the data from the API to build a comparison generator for the size of the asteroid. We also realised that occasionally the APOD API would be a video, and therefore would not show up as a background image. 
 Our background image would be empty, and therefore we altered the code so that we had a placeholder image if the API returned a video.
